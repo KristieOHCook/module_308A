@@ -43,11 +43,29 @@ class Cow extends Animal {
 }
 
 class Human extends Animal {
-  constructor(skin, isAwake, isMoving) {
+  constructor(name, skin, isAwake, isMoving) {
     super(2, 2, isAwake, isMoving);
+    this.name = name;
     this.skin = skin;
   }
-  speak() { super.speak("Hello!"); }
-  toString() { return super.toString("Human"); }
+introduce() {
+
+    this.speak(`Hi! My name is ${this.name} and I have ${this.skin} skin.');
+  }
+speak(words) { 
+    super.speak(words); 
+  }
+  
+  toString() { 
+
+  let baseString = super.toString("Human");
+
+    return '${baseString} This human's name is ${this.name} and they have ${this.} super.toString("Human"); 
+  }
 }
+ 
+const alex = new Human("Alex", "fair", true, false);
+alex.introduce();
+console.log(alex.toString());
+
 
