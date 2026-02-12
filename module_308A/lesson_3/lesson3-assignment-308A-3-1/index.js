@@ -25,5 +25,4 @@ async function getUserData(id) {
   }
 }
 
-// This line actually runs the code so you can see it in the terminal
 getUserData(1).then(console.log).catch(console.error);
